@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201806301724451_CreateProductTable.Designer.cs">
       <DependentUpon>201806301724451_CreateProductTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806302034169_PopulateCategoriesTable.cs" />
+    <Compile Include="Migrations\201806302034169_PopulateCategoriesTable.Designer.cs">
+      <DependentUpon>201806302034169_PopulateCategoriesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -301,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806301724451_CreateProductTable.resx">
       <DependentUpon>201806301724451_CreateProductTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806302034169_PopulateCategoriesTable.resx">
+      <DependentUpon>201806302034169_PopulateCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
