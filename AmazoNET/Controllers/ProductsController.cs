@@ -24,10 +24,16 @@ namespace AmazoNET.Controllers
 
             return View(viewModel);
         }
-
+         
         [HttpPost]
         public ActionResult Create(ProductFormViewModel viewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                viewModel.Categories = _context.Categories.ToList();
+                return View("Create", viewModel);
+            }
+
             var product = new Product
             {
                 Name = viewModel.Name,
