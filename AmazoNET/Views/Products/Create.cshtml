@@ -4,14 +4,15 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Create Product</h2>
+<p class="alert alert-info">All fields are <strong>required</strong>.</p>
 @using (Html.BeginForm("Create", "Products"))
 {
     @Html.AntiForgeryToken();
 
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", autofocus = "autofocus" })
         @Html.ValidationMessageFor(m => m.Name)
     </div>
     <div class="form-group">
