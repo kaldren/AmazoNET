@@ -33,12 +33,27 @@ textarea {
     color: #fff;
 }
 
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #bdc3c7;
+}
+
 .container-fluid .navbar-brand {
     color: #e67e22;
 }
 
 .navbar-inverse .navbar-brand {
     color: #e67e22;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #e67e22;
+}
+
+.dropdown-menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 body {
