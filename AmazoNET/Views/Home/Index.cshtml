@@ -6,7 +6,53 @@
 <ul>
     @foreach (var product in Model)
     {
-        <li>@product.Name - @product.Category.Name</li>
+        <li>
+            @product.Name - @product.Category.Name -
+            <a href="@Url.Action("Update", "Products", new {id = product.Id})">Edit</a>
+            <a href="#" class="js-remove-product" data-product-id="@product.Id">
+                Remove
+            </a>
+        </li>
     }
 </ul>
 
+@section scripts {
+    <script>
+        $(document).ready(function() {
+            $(".js-remove-product").click(function(e) {
+                var link = $(e.target);
+
+                bootbox.dialog({
+                    message: "Are you sure you want to remove this product?",
+                    title: "Confirm",
+                    buttons: {
+                        no: {
+                            label: "No",
+                            className: "btn-default",
+                            callback: function() {
+                                bootbox.hideAll();
+                            }
+                        },
+                        yes: {
+                            label: "Yes",
+                            className: "btn-danger",
+                            callback: function() {
+                                $.ajax({
+                                        url: "/api/products/" + link.attr("data-product-id"),
+                                        method: "POST"
+                                    })
+                                    .done(function() {
+                                        alert("YES!!!");
+                                    })
+                                    .fail(function() {
+                                        alert("Something failed!");
+                                    });
+                            }
+                        }
+                    }
+                });
+
+            });
+        });
+    </script>
+}

@@ -2,10 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 using AmazoNET.Models;
 
-namespace AmazoNET.ViewModels
+namespace AmazoNET.ViewModels.ProductViewModels
 {
     public class ProductFormViewModel
     {
+        public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 

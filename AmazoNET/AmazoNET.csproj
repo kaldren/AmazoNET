@@ -56,6 +56,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\GigHub\GigHub\Bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>I:\Mosh\Become a Full-stack .NET Developer - Architecture and Testing\Pluralsight - Become a Full-stack .NET Developer - Architecture and Testing\full-stack-dot-net-developer-architecture-testing\GigHub\Bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -196,6 +202,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -223,7 +230,6 @@
       <DependentUpon>201807011341440_AddNameToApplicationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -231,7 +237,16 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\ProductFormViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\ExternalLoginListViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\ForgotPasswordViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\ForgotViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\SendCodeViewModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModels\ProductFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -242,6 +257,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -293,6 +309,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
